@@ -1,0 +1,26 @@
+<template name="layout">
+ <div class="container">
+     <nav class="navbar navbar-default">
+        
+   <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand"><strong>Chess</strong></a>
+   </div>
+   <div class="collapse navbar-collapse" id="navigation">
+      <ul class="nav navbar-nav navbar-right">
+         <li><a href="/users">Find Friends</a></li>
+         <li><a href="/games">Find Games</a></li>
+         {{> loginButtons}}
+      </ul>
+   </div>
+     </nav>
+     <div id="main">
+        {{> Template.dynamic template=child}}
+     </div>
+ </div>
+</template>
